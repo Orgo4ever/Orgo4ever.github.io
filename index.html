@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kyle Haustein's portfolio: data analytics, AI quality assurance, and scientific research. Explore SQL, Tableau, Python, and Streamlit projects.">
+  <meta name="description" content="Kyle Haustein's portfolio: data analytics, AI quality assurance, AI-native workflows, and scientific research. Explore SQL, Tableau, Python, and Streamlit projects.">
   <title>Kyle Haustein | Data Analytics & AI Quality</title>
+
   <style>
     :root {
       --navy: #14243a;
@@ -16,8 +17,13 @@
       --white: #ffffff;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -27,7 +33,9 @@
       line-height: 1.65;
     }
 
-    a { color: var(--blue); }
+    a {
+      color: var(--blue);
+    }
 
     a:focus-visible {
       outline: 3px solid var(--blue);
@@ -59,7 +67,9 @@
       font-weight: 800;
     }
 
-    .logo span { color: var(--blue); }
+    .logo span {
+      color: var(--blue);
+    }
 
     .nav-links {
       display: flex;
@@ -74,9 +84,13 @@
       font-weight: 600;
     }
 
-    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover {
+      color: var(--blue);
+    }
 
-    .hero { padding: 105px 0 85px; }
+    .hero {
+      padding: 105px 0 85px;
+    }
 
     .eyebrow {
       color: var(--blue);
@@ -106,7 +120,8 @@
       max-width: 740px;
     }
 
-    .actions, .card-links {
+    .actions,
+    .card-links {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -136,9 +151,13 @@
       color: var(--blue);
     }
 
-    .button.secondary:hover { background: #eff6ff; }
+    .button.secondary:hover {
+      background: #eff6ff;
+    }
 
-    section { padding: 64px 0; }
+    section {
+      padding: 64px 0;
+    }
 
     .section-title {
       font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -174,7 +193,9 @@
       background: #edf2f8;
     }
 
-    .card-body { padding: 26px; }
+    .card-body {
+      padding: 26px;
+    }
 
     .tags {
       color: var(--blue);
@@ -190,7 +211,9 @@
       margin: 12px 0;
     }
 
-    .card p { color: var(--muted); }
+    .card p {
+      color: var(--muted);
+    }
 
     .card-links a {
       font-size: .9rem;
@@ -198,19 +221,32 @@
       text-decoration: none;
     }
 
-    .card-links a:hover { text-decoration: underline; }
+    .card-links a:hover {
+      text-decoration: underline;
+    }
 
-    .wide { grid-column: 1 / -1; }
+    .wide {
+      grid-column: 1 / -1;
+    }
 
     .case-study {
       padding: 30px;
-      background: linear-gradient(135deg,#14243a,#243f62);
+      background: linear-gradient(135deg, #14243a, #243f62);
       color: white;
     }
 
-    .case-study .tags { color: #93c5fd; }
-    .case-study p { color: #d5e1ee; max-width: 850px; }
-    .case-study h3 { margin: 12px 0; }
+    .case-study .tags {
+      color: #93c5fd;
+    }
+
+    .case-study p {
+      color: #d5e1ee;
+      max-width: 850px;
+    }
+
+    .case-study h3 {
+      margin: 12px 0;
+    }
 
     .stat {
       display: inline-block;
@@ -269,30 +305,56 @@
     }
 
     @media (max-width: 760px) {
-      .hero { padding: 65px 0 45px; }
-      section { padding: 45px 0; }
-      .projects { grid-template-columns: 1fr; }
-      .wide { grid-column: auto; }
+      .hero {
+        padding: 65px 0 45px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .wide {
+        grid-column: auto;
+      }
+
       nav {
         align-items: flex-start;
         padding: 18px 0;
         flex-direction: column;
       }
-      .card img { height: 220px; }
-      .card-body { padding: 20px; }
+
+      .card img {
+        height: 220px;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .button { transition: none; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button {
+        transition: none;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header>
     <nav class="container" aria-label="Main navigation">
       <a class="logo" href="#home">KH<span>.</span> Analytics</a>
+
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -303,195 +365,366 @@
   </header>
 
   <main>
+
+    <!-- HOMEPAGE INTRODUCTION -->
     <div class="container hero" id="home">
-      <div class="eyebrow">Data Analytics · AI Quality · Scientific Research</div>
+
+      <div class="eyebrow">
+        Data Analytics · AI Quality · Scientific Research
+      </div>
+
       <h1>Kyle Haustein</h1>
-      <h2>Turning complex data into reliable, actionable insights.</h2>
+
+      <h2>
+        Turning complex data into reliable, actionable insights.
+      </h2>
+
       <p>
-  Analytical professional combining scientific research,
-  AI quality leadership, and applied data analytics.
-  I bring an AI-native approach to solving unfamiliar
-  problems, developing analytical solutions, and improving
-  workflows through prompting, multimodal tools, and
-  automation. My work is grounded in scientific reasoning,
-  rigorous validation, and independent judgment.
-</p>
+        Analytical professional combining scientific research,
+        AI quality leadership, and applied data analytics.
+        I bring an AI-native approach to solving unfamiliar
+        problems, developing analytical solutions, and improving
+        workflows through prompting, multimodal tools, and
+        automation. My work is grounded in scientific reasoning,
+        rigorous validation, and independent judgment.
+      </p>
+
+      <!-- HOMEPAGE BUTTONS -->
       <div class="actions">
-        <a class="button" href="#projects">Explore Projects</a>
+
+        <a class="button" href="#projects">
+          Explore Projects
+        </a>
+
+        <a class="button"
+           href="Kyle_Haustein_Professional_Resume.pdf"
+           download>
+          Download Résumé ↓
+        </a>
+
         <a class="button secondary"
            href="https://www.linkedin.com/in/kyle-haustein-620a38126/"
-           target="_blank" rel="noopener noreferrer">
+           target="_blank"
+           rel="noopener noreferrer">
           Connect on LinkedIn
         </a>
+
       </div>
     </div>
 
+    <!-- FEATURED PROJECTS -->
     <section id="projects" class="container">
+
       <h2 class="section-title">Featured Projects</h2>
+
       <p class="section-intro">
-        Selected work demonstrating end-to-end analytics, interactive
-        decision-support tools, and quality-focused problem solving.
+        Selected work demonstrating end-to-end analytics,
+        interactive decision-support tools, and
+        quality-focused problem solving.
       </p>
 
       <div class="projects">
 
-        <!-- Pharmaceutical Procurement Project -->
+        <!-- PHARMACEUTICAL PROCUREMENT PROJECT -->
         <article class="card">
+
           <img
             src="procurement-dashboard.png"
             alt="Interactive Tableau dashboard analyzing UK pharmaceutical procurement"
             loading="lazy">
 
           <div class="card-body">
-            <div class="tags">SQL · Tableau · Data Quality</div>
+
+            <div class="tags">
+              SQL · Tableau · Data Quality
+            </div>
+
             <h3>UK Pharmaceutical Procurement Analytics</h3>
+
             <p>
-  How reliably can procurement activity be understood when
-  award counts are highly concentrated and financial
-  reporting is incomplete?
-</p>
-<p>
-  I developed a MySQL analytical model and interactive
-  Tableau dashboard to investigate 2024 UK pharmaceutical
-  procurement records, covering 170 procurement processes
-  and 1,222 awards.
-</p>
-<p>
-  The analysis revealed that just 12 procurement processes
-  generated 69.56% of award records, while approximately
-  65% of contract records contained missing or nominal
-  values. These findings highlight why award activity
-  and reported spending must be interpreted separately.
-</p>
-<p>
-  The dashboard enables exploration of supplier participation,
-  buyer activity, procurement methods, and data quality,
-  providing a transparent foundation for procurement analysis.
-</p>
+              How reliably can procurement activity be understood
+              when award counts are highly concentrated and
+              financial reporting is incomplete?
+            </p>
+
+            <p>
+              I developed a MySQL analytical model and interactive
+              Tableau dashboard to investigate 2024 UK pharmaceutical
+              procurement records, covering 170 procurement processes
+              and 1,222 awards.
+            </p>
+
+            <p>
+              The analysis revealed that just 12 procurement processes
+              generated 69.56% of award records, while approximately
+              65% of contract records contained missing or nominal
+              values. These findings highlight why award activity
+              and reported spending must be interpreted separately.
+            </p>
+
+            <p>
+              The dashboard enables exploration of supplier
+              participation, buyer activity, procurement methods,
+              and data quality, providing a transparent foundation
+              for procurement analysis.
+            </p>
+
             <div class="card-links">
+
               <a href="https://public.tableau.com/app/profile/kyle.haustein/viz/pharmaceutical_procurement_interactive/Dashboard1"
-                 target="_blank" rel="noopener noreferrer">
+                 target="_blank"
+                 rel="noopener noreferrer">
                 Explore Dashboard ↗
               </a>
+
               <a href="https://github.com/Orgo4ever/pharmaceutical-procurement-analytics"
-                 target="_blank" rel="noopener noreferrer">
+                 target="_blank"
+                 rel="noopener noreferrer">
                 View GitHub ↗
               </a>
+
             </div>
           </div>
         </article>
 
-        <!-- GrantScope Project -->
+        <!-- GRANTSCOPE PROJECT -->
         <article class="card">
+
           <img
             src="grantscope-interface.png"
             alt="GrantScope research funding discovery application with interactive filters"
             loading="lazy">
 
           <div class="card-body">
-            <div class="tags">Python · Streamlit · APIs · Research Analytics</div>
+
+            <div class="tags">
+              Python · Streamlit · APIs · Research Analytics
+            </div>
+
             <h3>GrantScope — Research Funding Discovery</h3>
 
             <p>
-  <strong>
-    How can researchers connect new ideas to existing
-    funding opportunities and research trends?
-  </strong>
-</p>
+              <strong>
+                How can researchers connect new ideas to existing
+                funding opportunities and research trends?
+              </strong>
+            </p>
 
-<p>
-  GrantScope combines an interactive Python and Streamlit
-  application with a Tableau funding analytics dashboard.
-  The application helps users discover historically funded
-  research related to their ideas through concept similarity
-  ranking, research data integration, and interactive filters.
-</p>
+            <p>
+              GrantScope combines an interactive Python and Streamlit
+              application with a Tableau funding analytics dashboard.
+              The application helps users discover historically funded
+              research related to their ideas through concept similarity
+              ranking, research data integration, and interactive filters.
+            </p>
 
-<p>
-  The complementary Tableau dashboard enables exploration
-  of the broader research funding landscape, connecting
-  individual project discovery with funding trends and
-  patterns across research programs.
-</p>
+            <p>
+              The complementary Tableau dashboard enables exploration
+              of the broader research funding landscape, connecting
+              individual project discovery with funding trends and
+              patterns across research programs.
+            </p>
 
-<p>
-  <strong>Explore the project:</strong>
-  Try the live application to investigate a research concept,
-  or open the Tableau dashboard to explore the funding
-  landscape. Similarity scores indicate relevance,
-  not funding probability.
-</p>
+            <p>
+              <strong>Explore the project:</strong>
+              Try the live application to investigate a research
+              concept, or open the Tableau dashboard to explore
+              the funding landscape. Similarity scores indicate
+              relevance, not funding probability.
+            </p>
 
             <div class="card-links">
+
               <a href="https://orgo4ever-grantscope-app-advanced-features-uwichh.streamlit.app/"
-                 target="_blank" rel="noopener noreferrer">
-               
-       
-<div class="card-links">
-  <a href="https://orgo4ever-grantscope-app-advanced-features-uwichh.streamlit.app/"
-     target="_blank" rel="noopener noreferrer">
-    Try GrantScope Live ↗
-  </a>
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Try GrantScope Live ↗
+              </a>
 
-  <a href="https://public.tableau.com/app/profile/kyle.haustein/viz/FundingDashboard_17860075845690/FundingLandscapeDashboard"
-     target="_blank" rel="noopener noreferrer">
-    Explore Funding Dashboard ↗
-  </a>
+              <a href="https://public.tableau.com/app/profile/kyle.haustein/viz/FundingDashboard_17860075845690/FundingLandscapeDashboard"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Explore Funding Dashboard ↗
+              </a>
 
-  <a href="https://github.com/Orgo4ever/GrantScope2"
-     target="_blank" rel="noopener noreferrer">
-    View GitHub ↗
-  </a>
-</div>
-     
+              <a href="https://github.com/Orgo4ever/GrantScope2"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View GitHub ↗
+              </a>
 
-        <!-- AI Quality Leadership -->
-        
-<article class="card wide case-study">
-  <div class="tags">
-    AI Evaluation · Prompt Engineering · Multimodal Workflows · Quality Assurance
-  </div>
+            </div>
+          </div>
+        </article>
 
-  <h3>AI-Native Analytics &amp; Quality Leadership</h3>
+        <!-- AI-NATIVE QUALITY LEADERSHIP -->
+        <article class="card wide case-study">
 
-  <p>
-    My experience with AI goes beyond using it as a productivity
-    tool. I've worked professionally on evaluating advanced AI
-    systems, assessing technical reasoning, identifying errors,
-    and improving the consistency of model evaluation.
-  </p>
+          <div class="tags">
+            AI Evaluation · Prompt Engineering · Multimodal Workflows · Quality Assurance
+          </div>
 
-  <p>
-    As a QA Lead on a specialized AI evaluation project,
-    I served as a bridge between subject matter experts,
-    internal management, and client stakeholders. I supported
-    quality standards, reviewer calibration, and operational
-    consistency, contributing to a final project pass rate
-    of 95% against a target exceeding 90%.
-  </p>
+          <h3>AI-Native Analytics &amp; Quality Leadership</h3>
 
-  <p>
-    Today, AI is embedded in how I work. I routinely use
-    iterative prompting and multimodal tools to learn
-    unfamiliar domains, develop and debug SQL and Python,
-    analyze documents and visual information, create
-    repeatable workflows, and produce technical and
-    professional content.
-  </p>
+          <p>
+            My experience with AI goes beyond using it as a
+            productivity tool. I've worked professionally on
+            evaluating advanced AI systems, assessing technical
+            reasoning, identifying errors, and improving the
+            consistency of model evaluation.
+          </p>
 
-  <p>
-    My advantage is combining this practical AI fluency
-    with scientific reasoning and professional quality
-    assurance experience. I use AI to accelerate exploration
-    and execution while critically validating outputs,
-    challenging assumptions, and retaining responsibility
-    for the final result.
-  </p>
+          <p>
+            As a QA Lead on a specialized AI evaluation project,
+            I served as a bridge between subject matter experts,
+            internal management, and client stakeholders. I supported
+            quality standards, reviewer calibration, and operational
+            consistency, contributing to a final project pass rate
+            of 95% against a target exceeding 90%.
+          </p>
 
-  <span class="stat">95%</span>
-  <span class="stat-label">
-    Final AI evaluation project pass rate · Quality target above 90%
-  </span>
-</article>
+          <p>
+            Today, AI is embedded in how I work. I routinely use
+            iterative prompting and multimodal tools to learn
+            unfamiliar domains, develop and debug SQL and Python,
+            analyze documents and visual information, create
+            repeatable workflows, and produce technical and
+            professional content.
+          </p>
+
+          <p>
+            My advantage is combining this practical AI fluency
+            with scientific reasoning and professional quality
+            assurance experience. I use AI to accelerate exploration
+            and execution while critically validating outputs,
+            challenging assumptions, and retaining responsibility
+            for the final result.
+          </p>
+
+          <span class="stat">95%</span>
+
+          <span class="stat-label">
+            Final AI evaluation project pass rate · Quality target above 90%
+          </span>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="container">
+
+      <h2 class="section-title">Technical Skills</h2>
+
+      <p class="section-intro">
+        Tools and methods used across analytical projects,
+        scientific research, and quality assurance work.
+      </p>
+
+      <div class="skills">
+        <span class="skill">SQL / MySQL</span>
+        <span class="skill">Python</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Streamlit</span>
+        <span class="skill">Data Cleaning</span>
+        <span class="skill">Data Validation</span>
+        <span class="skill">Statistical Analysis</span>
+        <span class="skill">Data Visualization</span>
+        <span class="skill">API Integration</span>
+        <span class="skill">AI Evaluation</span>
+        <span class="skill">Quality Assurance</span>
+        <span class="skill">Technical Documentation</span>
+      </div>
+
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="about">
+
+      <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+          My analytical foundation comes from chemistry research,
+          where I developed experience interpreting complex scientific
+          information, investigating mechanisms, evaluating evidence,
+          and communicating technical findings.
+        </p>
+
+        <p>
+          I later applied that analytical mindset to AI model evaluation
+          and quality assurance, including leading technical review
+          workflows and working with multidisciplinary stakeholders.
+        </p>
+
+        <p>
+          Building on this experience, I completed an intensive data
+          analytics program covering Python, SQL, statistics, Tableau,
+          and interactive application development. My projects combine
+          technical implementation with a focus on data reliability,
+          practical interpretation, and decision-making.
+        </p>
+
+        <p>
+          Based in the Netherlands and interested in opportunities
+          involving data analytics, business intelligence, data quality,
+          and analytical operations.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+
+      <h2 class="section-title">Let's Connect</h2>
+
+      <p class="section-intro">
+        Interested in discussing analytical projects, quality-focused
+        work, or professional opportunities? Connect with me below.
+      </p>
+
+      <div class="actions">
+
+        <a class="button"
+           href="https://www.linkedin.com/in/kyle-haustein-620a38126/"
+           target="_blank"
+           rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a class="button secondary"
+           href="https://github.com/Orgo4ever"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub
+        </a>
+
+        <a class="button secondary"
+           href="Kyle_Haustein_Professional_Resume.pdf"
+           download>
+          Download Résumé ↓
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Kyle Haustein</span>
+      <span>Data Analytics · AI Quality · Scientific Research</span>
+    </div>
+  </footer>
+
+</body>
+</html>
 
 
