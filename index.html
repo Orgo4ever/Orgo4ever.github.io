@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kyle Haustein's portfolio: data analytics, AI quality assurance, AI-native workflows, and scientific research. Explore SQL, Tableau, Python, and Streamlit projects.">
-  <title>Kyle Haustein | Data Analytics & AI Quality</title>
+  <meta name="description" content="Kyle Haustein's portfolio: data analytics, AI quality assurance, AI-native workflows, and scientific research. Explore SQL, Power BI, Tableau, Python, and Streamlit projects.">
+  <title>Kyle Haustein | Data Analytics &amp; AI Quality</title>
 
   <style>
     :root {
@@ -184,7 +183,7 @@
       border: 1px solid var(--line);
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 8px 28px rgba(20,36,58,.045);
+      box-shadow: 0 8px 28px rgba(20, 36, 58, .045);
     }
 
     .card img {
@@ -225,6 +224,11 @@
 
     .card-links a:hover {
       text-decoration: underline;
+    }
+
+    .report-note {
+      font-size: .82rem;
+      margin-top: 16px;
     }
 
     .wide {
@@ -475,15 +479,20 @@
         <!-- PHARMACEUTICAL PROCUREMENT PROJECT -->
         <article class="card">
 
-          <img
-            src="procurement-dashboard.png"
-            alt="Interactive Tableau dashboard analyzing UK pharmaceutical procurement"
-            loading="lazy">
+          <a href="https://raw.githubusercontent.com/Orgo4ever/pharmaceutical-procurement-analytics/main/procurement-dashboard.png"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="View the full-size Power BI procurement dashboard screenshot">
+            <img
+              src="https://raw.githubusercontent.com/Orgo4ever/pharmaceutical-procurement-analytics/main/procurement-dashboard.png"
+              alt="Power BI dashboard showing 170 UK procurement processes, 1,222 awards, supplier participation, award concentration and contract-value quality"
+              loading="lazy">
+          </a>
 
           <div class="card-body">
 
             <div class="tags">
-              SQL · Tableau · Data Quality
+              SQL · Power BI · Power Query · DAX · Tableau
             </div>
 
             <h3>UK Pharmaceutical Procurement Analytics</h3>
@@ -495,42 +504,53 @@
             </p>
 
             <p>
-              I developed a MySQL analytical model and interactive
-              Tableau dashboard to investigate 2024 UK pharmaceutical
-              procurement records, covering 170 procurement processes
-              and 1,222 awards.
+              Working with a supplied database schema, I developed
+              MySQL analysis and interactive Power BI and Tableau
+              reports covering 170 procurement processes and
+              1,222 awards in a 2024 UK procurement extract.
             </p>
 
             <p>
-              The analysis revealed that just 12 procurement processes
-              generated 69.56% of award records, while approximately
-              65% of contract records contained missing or nominal
-              values. These findings highlight why award activity
-              and reported spending must be interpreted separately.
+              In Power BI, I prepared four tables with Power Query,
+              configured relationships and built DAX measures for
+              procurement activity, award concentration and contract-data
+              quality. I checked report totals against SQL results
+              and verified procurement-method filtering.
             </p>
 
             <p>
-              The dashboard enables exploration of supplier
-              participation, buyer activity, procurement methods,
-              and data quality, providing a transparent foundation
-              for procurement analysis.
+              Just 12 procurement processes account for 69.56% of
+              award records. Missing or nominal £1 values affect
+              65.05% of contract records, making reported values
+              unreliable for expenditure comparisons. The reports
+              therefore emphasize participation, award distribution
+              and transparent data-quality limitations.
             </p>
 
             <div class="card-links">
 
+              <a href="https://github.com/Orgo4ever/pharmaceutical-procurement-analytics/raw/refs/heads/main/Data/Power%20BI/UK_Pharmaceutical_Procurement_PowerBI.pbix">
+                Download Power BI Report (.pbix) ↓
+              </a>
+
               <a href="https://public.tableau.com/app/profile/kyle.haustein/viz/pharmaceutical_procurement_interactive/Dashboard1"
                  target="_blank"
                  rel="noopener noreferrer">
-                Explore Dashboard ↗
+                Explore Tableau Dashboard ↗
               </a>
 
               <a href="https://github.com/Orgo4ever/pharmaceutical-procurement-analytics"
                  target="_blank"
                  rel="noopener noreferrer">
-                View GitHub ↗
+                View GitHub &amp; Methodology ↗
               </a>
 
             </div>
+
+            <p class="report-note">
+              Power BI Desktop is required to open the report download.
+              Click the preview image to inspect the full-size screenshot.
+            </p>
           </div>
         </article>
 
@@ -739,6 +759,10 @@
         <span class="skill">Python</span>
         <span class="skill">Pandas</span>
         <span class="skill">NumPy</span>
+        <span class="skill">Power BI Desktop</span>
+        <span class="skill">Power Query</span>
+        <span class="skill">DAX</span>
+        <span class="skill">Data Modeling</span>
         <span class="skill">Tableau</span>
         <span class="skill">Streamlit</span>
         <span class="skill">Data Cleaning</span>
@@ -839,6 +863,5 @@
 
 </body>
 </html>
-
 
 
