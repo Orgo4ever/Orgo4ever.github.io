@@ -288,6 +288,100 @@
       margin-top: 0;
     }
 
+    /* VANGUARD EXPERIMENT PREVIEW */
+
+    .experiment-overview {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+      gap: 20px;
+      padding: 22px;
+      background: #edf2f8;
+    }
+
+    .experiment-plot,
+    .experiment-stat {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .experiment-plot {
+      padding: 22px;
+    }
+
+    .experiment-plot h4 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+
+    .experiment-plot p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .experiment-bar-row {
+      margin: 14px 0;
+    }
+
+    .experiment-bar-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .experiment-track {
+      height: 14px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #e4ebf5;
+    }
+
+    .experiment-fill {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+    }
+
+    .experiment-fill.control {
+      background: #63758a;
+    }
+
+    .experiment-fill.test {
+      background: var(--blue);
+    }
+
+    .experiment-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .experiment-stat {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .experiment-stat strong {
+      display: block;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    .experiment-stat span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+
     /* EUROPEAN AI SUSTAINABILITY PROJECT */
 
     .project-feature {
@@ -437,6 +531,11 @@
       .project-summary-grid {
         grid-template-columns: 1fr;
         gap: 0;
+      }
+
+      .experiment-overview {
+        grid-template-columns: 1fr;
+        padding: 14px;
       }
 
       .project-feature {
@@ -648,6 +747,153 @@
               cover selected matched dates in 2010–2011; the separate sales
               dashboard covers 2011–2013. Download the report to explore
               its interactive pages in Power BI Desktop.
+            </p>
+
+          </div>
+        </article>
+
+        <!-- VANGUARD DIGITAL JOURNEY A/B TEST -->
+        <article class="card wide" id="vanguard-ab-test">
+
+          <div class="experiment-overview">
+
+            <div class="experiment-plot">
+              <h4>Valid digital journey completion</h4>
+              <p>Control versus redesigned Test experience</p>
+
+              <div class="experiment-bar-row">
+                <div class="experiment-bar-label">
+                  <span>Control</span>
+                  <span>45.98%</span>
+                </div>
+                <div class="experiment-track">
+                  <span class="experiment-fill control" style="width: 45.98%;"></span>
+                </div>
+              </div>
+
+              <div class="experiment-bar-row">
+                <div class="experiment-bar-label">
+                  <span>Test</span>
+                  <span>48.10%</span>
+                </div>
+                <div class="experiment-track">
+                  <span class="experiment-fill test" style="width: 48.10%;"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="experiment-stats">
+              <div class="experiment-stat">
+                <strong>+2.12 pp</strong>
+                <span>Absolute completion uplift</span>
+              </div>
+              <div class="experiment-stat">
+                <strong>+4.6%</strong>
+                <span>Relative lift; below 5% business target</span>
+              </div>
+              <div class="experiment-stat">
+                <strong>p &lt; 0.001</strong>
+                <span>Statistical significance</span>
+              </div>
+              <div class="experiment-stat">
+                <strong>~69,447</strong>
+                <span>Reconstructed customer journeys</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card-body">
+
+            <div class="tags">
+              Python · Pandas · A/B Testing · Hypothesis Testing · Tableau
+            </div>
+
+            <h3>Vanguard Digital Journey A/B Test</h3>
+
+            <div class="project-summary-grid">
+
+              <div>
+                <p>
+                  <strong>
+                    Did a redesigned digital customer journey improve
+                    valid completion enough to justify further investment?
+                  </strong>
+                </p>
+
+                <p>
+                  In a collaborative Ironhack analytics project, we
+                  analyzed event-level digital interactions, reconstructed
+                  ordered customer journeys, and evaluated a redesigned
+                  Test experience against the existing Control experience.
+                  The workflow combined Python analysis, statistical
+                  testing, and Tableau reporting.
+                </p>
+
+                <p>
+                  My contributions focused on building the data foundation,
+                  demographic analysis, defining valid completion,
+                  calculating uplift, and translating performance into
+                  business-facing metrics.
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  <strong>Experiment result:</strong>
+                  Valid completion improved from 45.98% in Control to
+                  48.10% in Test: a statistically significant
+                  2.12-percentage-point gain (approximately 4.6%
+                  relative lift).
+                </p>
+
+                <p>
+                  <strong>Business interpretation:</strong>
+                  The gain fell just short of the predefined 5%
+                  relative-lift target. Median journey duration also
+                  increased from approximately 160 to 168 seconds,
+                  suggesting a trade-off between completion and speed.
+                </p>
+
+                <p>
+                  <strong>Recommendation:</strong>
+                  Retain promising redesign elements, investigate
+                  repeated interactions and remaining drop-off, and
+                  run a follow-up controlled test before declaring
+                  the experience fully optimized.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="card-links">
+
+              <a href="https://github.com/Orgo4ever/vanguard-ab-test"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Read A/B Test Case Study ↗
+              </a>
+
+              <a href="https://github.com/Orgo4ever/vanguard-ab-test/blob/main/Notebooks/04a_completion_hypothesis_testing.ipynb"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Python Analysis ↗
+              </a>
+
+              <a href="https://github.com/Orgo4ever/vanguard-ab-test/blob/main/Tableau%20files/Project%202%20Dashboard.twbx"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Get Tableau Workbook ↗
+              </a>
+
+            </div>
+
+            <p class="report-note">
+              Collaborative educational case study using a
+              Vanguard-labeled dataset, not an official Vanguard
+              engagement. Results describe reconstructed journeys;
+              statistical significance does not imply that the
+              business target was met.
             </p>
 
           </div>
