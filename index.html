@@ -172,6 +172,29 @@
       margin: 0 0 30px;
     }
 
+    .workflow-preview {
+      min-height: 255px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 24px 16px;
+      background: #edf2f8;
+      color: #334155;
+      font-weight: 750;
+      font-size: .85rem;
+    }
+    .workflow-preview span:nth-child(odd) {
+      background: white;
+      border: 1px solid #d6e1ef;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .workflow-preview span:nth-child(even) {
+      color: #2563eb;
+      font-weight: 800;
+    }
     /* FEATURED PROJECT GRID */
 
     .projects {
@@ -635,7 +658,7 @@
 
       <p class="section-intro">
         Selected work demonstrating end-to-end analytics,
-        interactive decision-support tools, data integration,
+        repeatable automation, interactive decision-support tools,
         and quality-focused problem solving.
       </p>
 
@@ -982,10 +1005,7 @@
 
             <div class="card-links">
 
-              <a href="UK_Pharmaceutical_Procurement_PowerBI.pbix"
-                 download>
-                Download Power BI Report (.pbix) ↓
-              </a>
+              <a href="procurement-case-study.html">Read Procurement Case Study ↗</a>
 
               <a href="https://public.tableau.com/app/profile/kyle.haustein/viz/pharmaceutical_procurement_interactive/Dashboard1"
                  target="_blank"
@@ -996,9 +1016,9 @@
             </div>
 
             <p class="report-note">
-              Open the downloaded report in Power BI to use
-              its interactive filters. Click either preview image
-              to view the full-size screenshot.
+              The Power BI report file and source repository are not publicly
+              hosted. View the screenshots above, read the methods
+              and findings, or explore the interactive Tableau report.
             </p>
 
           </div>
@@ -1064,7 +1084,7 @@
                 Explore Funding Dashboard ↗
               </a>
 
-              <a href="https://github.com/Orgo4ever/GrantScope2"
+              <a href="https://github.com/Orgo4ever/GrantScope"
                  target="_blank"
                  rel="noopener noreferrer">
                 View GitHub ↗
@@ -1136,6 +1156,61 @@
               </a>
 
             </div>
+          </div>
+        </article>
+
+        <!-- APPLIED MACHINE LEARNING: CONCRETE STRENGTH -->
+        <article class="card">
+          <a href="https://github.com/Orgo4ever/Predicting-Concrete-Compressive-Strength-from-Mix-Composition-and-Curing-Age"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Explore concrete compressive strength machine learning project">
+            <img src="https://raw.githubusercontent.com/Orgo4ever/Predicting-Concrete-Compressive-Strength-from-Mix-Composition-and-Curing-Age/main/Plots/final_actual_vs_predicted.png"
+                 alt="Actual versus predicted concrete compressive strength for the final regression model"
+                 loading="lazy">
+          </a>
+          <div class="card-body">
+            <div class="tags">Python · scikit-learn · Feature Engineering · Regression</div>
+            <h3>Predicting Concrete Compressive Strength</h3>
+            <p><strong>Can material composition and curing age provide useful preliminary strength estimates?</strong></p>
+            <p>Developed a supervised regression workflow using 1,005 observations,
+               domain-informed features, ensemble methods and cross-validation.
+               The final Gradient Boosting model achieved a held-out test MAE
+               of 2.66 MPa and R² of 0.941.</p>
+            <p>The model supports preliminary screening, not replacement of
+               physical material testing. Validation decisions and limitations
+               are documented in the repository.</p>
+            <div class="card-links">
+              <a href="https://github.com/Orgo4ever/Predicting-Concrete-Compressive-Strength-from-Mix-Composition-and-Curing-Age"
+                 target="_blank" rel="noopener noreferrer">Explore ML Project ↗</a>
+              <a href="https://github.com/Orgo4ever/Predicting-Concrete-Compressive-Strength-from-Mix-Composition-and-Curing-Age/blob/main/Machine%20Learning%20Project%20README.md"
+                 target="_blank" rel="noopener noreferrer">Read Methods &amp; Results ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- JOBSCOUT AUTOMATED SCREENING CASE STUDY -->
+        <article class="card">
+          <div class="workflow-preview" aria-label="JobScout workflow: collect, validate, review">
+            <span>Collect jobs</span><span aria-hidden="true">→</span>
+            <span>Validate fit</span><span aria-hidden="true">→</span>
+            <span>Human review</span>
+          </div>
+          <div class="card-body">
+            <div class="tags">Python · APIs · pytest · GitHub Actions · Data Quality</div>
+            <h3>JobScout NL — Evidence-Based Job Screening</h3>
+            <p><strong>How can a changing stream of job postings become
+               a reliable, human-reviewed decision queue?</strong></p>
+            <p>Designed a scheduled Python workflow to collect postings,
+               screen requirements and location constraints, retain review history,
+               and synchronize results with Google Sheets without overwriting
+               human application decisions.</p>
+            <p>Automated tests, conservative eligibility checks and documented
+               limitations make this an operations and data-quality case study.</p>
+            <div class="card-links">
+              <a href="jobscout-case-study.html">Read Technical Case Study ↗</a>
+            </div>
+            <p class="report-note">The working repository remains private;
+               this overview does not disclose personal tracking records or credentials.</p>
           </div>
         </article>
 
@@ -1218,6 +1293,8 @@
         <span class="skill">Data Cleaning</span>
         <span class="skill">Data Integration</span>
         <span class="skill">Data Validation</span>
+        <span class="skill">Automated Testing / pytest</span>
+        <span class="skill">GitHub Actions</span>
         <span class="skill">Statistical Analysis</span>
         <span class="skill">Data Visualization</span>
         <span class="skill">API Integration</span>
