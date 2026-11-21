@@ -1,0 +1,12 @@
+{
+  "name": "Demo Candidate",
+  "note": "Invented profile, not the owner's CV",
+  "dutch_level": "beginner",
+  "skills": [
+    "SQL",
+    "Python",
+    "Power BI",
+    "Excel",
+    "data quality"
+  ]
+}
