@@ -1,0 +1,28 @@
+name: JobScout showcase tests
+
+on:
+  push:
+    paths:
+      - "projects/jobscout-nl/**"
+      - ".github/workflows/jobscout-showcase-ci.yml"
+  pull_request:
+    paths:
+      - "projects/jobscout-nl/**"
+      - ".github/workflows/jobscout-showcase-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-demo-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run deterministic offline regression tests
+        run: python -m unittest discover -s projects/jobscout-nl/tests -p "test_*.py" -v
+      - name: Run offline screening demonstration
+        run: python projects/jobscout-nl/jobscout_demo.py --json
