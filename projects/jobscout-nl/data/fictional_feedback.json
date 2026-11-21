@@ -1,0 +1,7 @@
+[
+  {
+    "url": "https://jobs.example.org/gh/1003?utm_source=manual",
+    "decision": "Reject",
+    "reason": "Example of exact-vacancy rejection; another vacancy from the same employer remains visible"
+  }
+]
