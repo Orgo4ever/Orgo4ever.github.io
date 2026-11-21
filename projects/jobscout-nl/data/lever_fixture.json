@@ -1,0 +1,35 @@
+[
+  {
+    "id": "l2001",
+    "text": "BI Analyst",
+    "categories": {
+      "location": "Europe — Remote",
+      "commitment": "Full-time"
+    },
+    "workplaceType": "remote",
+    "descriptionPlain": "Power BI, SQL and Python reporting.",
+    "hostedUrl": "https://jobs.example.org/lever/l2001?utm_campaign=demo"
+  },
+  {
+    "id": "l2002",
+    "text": "Senior Operations Analyst",
+    "categories": {
+      "location": "New York, USA",
+      "commitment": "Full-time"
+    },
+    "workplaceType": "onsite",
+    "descriptionPlain": "Advanced SQL and stakeholder ownership; senior experience expected.",
+    "hostedUrl": "https://jobs.example.org/lever/l2002"
+  },
+  {
+    "id": "l2003",
+    "text": "Data Steward",
+    "categories": {
+      "location": "United States only — Remote",
+      "commitment": "Full-time"
+    },
+    "workplaceType": "remote",
+    "descriptionPlain": "Power BI and SQL, US only.",
+    "hostedUrl": "https://jobs.example.org/lever/l2003"
+  }
+]
