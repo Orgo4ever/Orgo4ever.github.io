@@ -1,0 +1,34 @@
+{
+  "jobs": [
+    {
+      "id": 1001,
+      "title": "Junior Data Quality Analyst",
+      "location": {
+        "name": "Utrecht, Netherlands"
+      },
+      "workplace_type": "hybrid",
+      "content": "<p>SQL and Python skills. Dutch preferred, not mandatory. Maintain data quality checks.</p>",
+      "absolute_url": "https://jobs.example.org/gh/1001?utm_source=demo"
+    },
+    {
+      "id": 1002,
+      "title": "Master Data Analyst",
+      "location": {
+        "name": "Rotterdam, Netherlands"
+      },
+      "workplace_type": "onsite",
+      "content": "Experience with SQL and Excel. Fluent Dutch required for daily stakeholder communication.",
+      "absolute_url": "https://jobs.example.org/gh/1002"
+    },
+    {
+      "id": 1003,
+      "title": "Junior Reporting Analyst",
+      "location": {
+        "name": "Arnhem, Netherlands"
+      },
+      "workplace_type": "hybrid",
+      "content": "SQL and Excel required. Business intelligence reporting.",
+      "absolute_url": "https://jobs.example.org/gh/1003"
+    }
+  ]
+}
