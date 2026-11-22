@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ProcureGuard portfolio case study: Python data-quality validation, SQLite case governance, SQL reporting and a three-page Power BI dashboard.">
+<title>ProcureGuard — Data Quality &amp; Governance | Kyle Haustein</title>
+<style>
+:root{--ink:#19283c;--muted:#58697e;--line:#dce5ee;--blue:#2563eb;--bg:#f7fafc}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;margin:0}
+main,header,footer{max-width:1040px;margin:auto;padding:24px}
+header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+a{color:var(--blue)}header a{text-decoration:none;font-weight:700}header span{font-weight:800}
+.hero{padding:48px 0 26px}.eyebrow{font-size:.8rem;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;letter-spacing:-.03em;margin:12px 0 20px}
+h2{font-size:1.45rem;line-height:1.3;margin:0 0 16px}h3{font-size:1.06rem;margin:12px 0 8px}
+p{margin:10px 0}p.lead{font-size:1.15rem;max-width:850px;color:var(--muted)}
+section{background:#fff;border:1px solid var(--line);padding:26px;border-radius:14px;margin:20px 0}
+.pill{display:inline-block;border:1px solid var(--line);background:#edf4ff;border-radius:6px;padding:4px 9px;font-size:.85rem;margin:5px 5px 5px 0}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0}
+.metric{border:1px solid var(--line);background:#f5f9ff;border-radius:10px;padding:15px}
+.metric strong{font-size:1.55rem;display:block;line-height:1.2}.metric span{font-size:.84rem;color:var(--muted)}
+ul{padding-left:22px}li{margin:7px 0}
+.note{background:#f3f7fb;border-left:4px solid var(--blue);padding:12px 16px;color:var(--muted);border-radius:4px}
+figure{margin:20px 0 28px}figure img{display:block;width:100%;border:1px solid var(--line);border-radius:10px;background:#f8fafc}
+figcaption{font-size:.84rem;color:var(--muted);margin-top:8px}
+.links{display:flex;flex-wrap:wrap;gap:15px;margin-top:20px}.links a{font-weight:700}
+footer{color:var(--muted);font-size:.86rem;padding-bottom:50px}
+@media(max-width:750px){.metrics{grid-template-columns:repeat(2,1fr)}section{padding:20px}.hero{padding-top:24px}}
+@media(max-width:450px){.metrics{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><span>KH. Analytics</span><a href="index.html#projects">← Back to portfolio</a></header>
+<main>
+<div class="hero">
+  <div class="eyebrow">Case study · Data Quality · SQL · Power BI · Governance</div>
+  <h1>ProcureGuard — From Data Exceptions to Verified Resolution</h1>
+  <p class="lead">How can a team turn unreliable procurement records into traceable issues, document corrective actions, and confirm that a fix actually works?</p>
+  <div><span class="pill">Python</span><span class="pill">SQLite</span><span class="pill">SQL views</span><span class="pill">Power BI</span><span class="pill">Automated tests</span><span class="pill">GitHub Actions</span></div>
+</div>
+<section>
+  <h2>Executive summary</h2>
+  <p>I designed and built ProcureGuard as an end-to-end, reproducible <strong>synthetic procurement data-quality and governance demonstration</strong>. It combines an offline rule engine, a persistent issue register with investigation and ownership, a fresh-data verification gate, seven SQL reporting views and a three-page Power BI dashboard.</p>
+  <div class="metrics">
+    <div class="metric"><strong>6</strong><span>Documented validation rules</span></div>
+    <div class="metric"><strong>22</strong><span>Initial detected issues</span></div>
+    <div class="metric"><strong>1</strong><span>Verified case resolution</span></div>
+    <div class="metric"><strong>+2.63 pp</strong><span>Row-level pass-rate change between two demo scans</span></div>
+  </div>
+  <p>The demonstration deliberately starts with flawed fictional data, records a failed verification before the source is fixed, then rechecks the corrected source and verifies resolution of one case.</p>
+</section>
+<section>
+  <h2>What I built and why</h2>
+  <ul>
+    <li><strong>Explicit quality checks:</strong> Six configurable rules covering missing and duplicate identifiers, broken relational references, potential supplier duplicates, questionable contract values, and invalid dates or currency-code formats.</li>
+    <li><strong>Stateful investigation:</strong> SQLite retains stable row identities, issue assignments, investigation notes, corrective actions, statuses and actor-attributed audit events.</li>
+    <li><strong>Verification before closure:</strong> A case is resolved only when its issue no longer appears during a fresh validation of the authorized source record.</li>
+    <li><strong>Reporting layer:</strong> Seven SQL views export reconciled CSVs for case KPIs, rule summaries, owner workloads, scan comparisons, activity and verification evidence.</li>
+    <li><strong>Analyst-facing interface:</strong> Power BI connects the technical controls to clear operational questions about outstanding issues and verification outcomes.</li>
+  </ul>
+  <div class="note">Design choice: missing or nominal reported contract values and normalized supplier-name matches are review flags, not automatic evidence of financial error, fraud, or legal-entity duplication.</div>
+</section>
+<section>
+  <h2>Power BI dashboard — three perspectives</h2>
+  <h3>1. Quality Overview</h3>
+  <p>Current case KPIs, issues by rule, status composition, and filters for dataset, severity and status.</p>
+  <figure><a href="https://raw.githubusercontent.com/Orgo4ever/ProcureGuard/main/Dashboards/Screenshots/01_quality_overview.png" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Orgo4ever/ProcureGuard/main/Dashboards/Screenshots/01_quality_overview.png" loading="lazy" alt="Power BI quality overview page with case KPIs, issue rule breakdown and status visuals"></a><figcaption>Quality overview — click to open the full-size screenshot.</figcaption></figure>
+  <h3>2. Issue Management</h3>
+  <p>Unresolved and unassigned workload, high-priority issues, responsible owner breakdown, and a detailed exception register for investigation.</p>
+  <figure><a href="https://raw.githubusercontent.com/Orgo4ever/ProcureGuard/main/Dashboards/Screenshots/02_issue_management.png" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Orgo4ever/ProcureGuard/main/Dashboards/Screenshots/02_issue_management.png" loading="lazy" alt="Power BI issue-management page with owner workload, status cards and detailed exception table"></a><figcaption>Case management and ownership — a traceable register rather than a disconnected KPI count.</figcaption></figure>
+  <h3>3. Quality Trends &amp; Performance</h3>
+  <p>Two-scan comparison of row-level data quality, detected issues, the failed and successful verification events, and a concise interpretation of the change.</p>
+  <figure><a href="https://raw.githubusercontent.com/Orgo4ever/ProcureGuard/main/Dashboards/Screenshots/03_quality_trends.png" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/Orgo4ever/ProcureGuard/main/Dashboards/Screenshots/03_quality_trends.png" loading="lazy" alt="Power BI quality-trends page showing 42.11 percent initial and 44.74 percent latest pass rates and verification outcomes"></a><figcaption>Scan-to-scan performance and corrective-action verification, based on synthetic data.</figcaption></figure>
+  <div class="links"><a href="https://github.com/Orgo4ever/ProcureGuard/blob/main/Dashboards/ProcureGuard_Dashboard.pbix" target="_blank" rel="noopener noreferrer">Open the native Power BI file ↗</a><a href="https://github.com/Orgo4ever/ProcureGuard/blob/main/docs/powerbi_dashboard.md" target="_blank" rel="noopener noreferrer">Dashboard metric definitions ↗</a></div>
+</section>
+<section>
+  <h2>Results and interpretation</h2>
+  <p>The initial synthetic scan detected <strong>22 issues</strong> and a <strong>42.11%</strong> row-level pass rate. Following the scripted correction, the next scan detected <strong>21 issues</strong> and a <strong>44.74%</strong> pass rate: a difference of <strong>2.63 percentage points</strong>. The current case register records <strong>21 unresolved</strong> cases, including <strong>14 high-priority unresolved</strong>, and <strong>one resolved</strong> case.</p>
+  <p>One verification fails against unchanged source data before a corrected source record passes a new check. The point is to illustrate <strong>control design and evidence-backed closure</strong>, not to imply that a real organization achieved measurable gains.</p>
+  <div class="note">Scope: all 38 source rows, entities, transactions and verification events are fictional. Only two sequential demo scans exist; this is not a sustained time series or production deployment. Actors are illustrative text labels, not authenticated users. No real procurement or financial impact is claimed.</div>
+</section>
+<section>
+  <h2>Reproduce and inspect the work</h2>
+  <p>The public repository includes the synthetic data, configurable rule catalogue, Python quality engine, SQLite governance workflow, SQL reporting views, automated regression tests, CI scripts, a case-management SOP, Power BI report and screenshots.</p>
+  <div class="links"><a href="https://github.com/Orgo4ever/ProcureGuard" target="_blank" rel="noopener noreferrer">Explore the full GitHub repository ↗</a><a href="https://github.com/Orgo4ever/ProcureGuard/blob/main/docs/issue_management_sop.md" target="_blank" rel="noopener noreferrer">Read the issue-management SOP ↗</a><a href="https://github.com/Orgo4ever/ProcureGuard/blob/main/sql/reporting_views.sql" target="_blank" rel="noopener noreferrer">Inspect the SQL views ↗</a></div>
+</section>
+</main><footer>© 2026 Kyle Haustein · Data analytics, quality operations and governance</footer>
+</body></html>
