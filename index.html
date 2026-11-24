@@ -706,6 +706,50 @@
         </div>
         <div class="projects">
 
+        <!-- SERVICEPULSE OPERATIONS -->
+        <article class="card wide" id="servicepulse">
+          <div class="dashboard-previews">
+            <figure>
+              <a href="https://raw.githubusercontent.com/Orgo4ever/servicepulse-operations/main/Dashboards/Screenshots/01_Executive_Oveerview.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size ServicePulse Executive Overview">
+                <img src="https://raw.githubusercontent.com/Orgo4ever/servicepulse-operations/main/Dashboards/Screenshots/01_Executive_Oveerview.png" alt="ServicePulse executive dashboard showing total requests, open backlog, overdue requests, on-time closure, department and service-type breakdowns, and monthly intake" loading="lazy">
+              </a>
+              <figcaption>Executive Overview</figcaption>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/Orgo4ever/servicepulse-operations/main/Dashboards/Screenshots/Scre02_Bottleneck_Analysis.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size ServicePulse Bottleneck Analysis">
+                <img src="https://raw.githubusercontent.com/Orgo4ever/servicepulse-operations/main/Dashboards/Screenshots/Scre02_Bottleneck_Analysis.png" alt="Parking Enforcement bottleneck dashboard showing backlog age, queue concentration and recorded target windows" loading="lazy">
+              </a>
+              <figcaption>Bottleneck Analysis</figcaption>
+            </figure>
+          </div>
+          <div class="card-body">
+            <div class="tags">Python · SQLite · SQL · Power BI · DAX · Operations Analytics</div>
+            <h3>ServicePulse | Operational Performance &amp; Process Improvement</h3>
+            <div class="experiment-stats" style="grid-template-columns:repeat(auto-fit,minmax(155px,1fr));margin:20px 0;">
+              <div class="experiment-stat"><strong>306,756</strong><span>Real service requests analyzed</span></div>
+              <div class="experiment-stat"><strong>44.5%</strong><span>Citywide overdue backlog attributable to Parking Enforcement</span></div>
+              <div class="experiment-stat"><strong>99.7%</strong><span>Overdue Parking Enforcement requests concentrated in one queue</span></div>
+            </div>
+            <p><strong>Where do operational delays concentrate, and which service workflows should management investigate first?</strong></p>
+            <div class="project-summary-grid">
+              <div>
+                <p><strong>Technical implementation:</strong> Developed a reproducible Python and SQLite pipeline using public Boston 311 service request data. Validated source records, reconstructed historical backlog conditions, created SQL reporting views and built a two-page Power BI report.</p>
+                <p>The workflow includes automated tests, documented metric definitions and privacy-minimized data ingestion.</p>
+              </div>
+              <div>
+                <p><strong>Operational findings:</strong> Identified Parking Enforcement as a major contributor to the historical overdue backlog. Within this service, 83.5% of open requests were at least 30 days old and 99.2% of requests had recorded target windows of 1–7 days.</p>
+                <p><strong>Management recommendation:</strong> Investigate case-closure procedures, target-setting policies and queue monitoring before recommending staffing or workflow changes.</p>
+              </div>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/Orgo4ever/servicepulse-operations" target="_blank" rel="noopener noreferrer">Read Project Case Study ↗</a>
+              <a href="https://github.com/Orgo4ever/servicepulse-operations/blob/main/Dashboards/Operations-Dashboard.pbix" target="_blank" rel="noopener noreferrer">Get Power BI Report (.pbix) ↗</a>
+              <a href="https://github.com/Orgo4ever/servicepulse-operations/blob/main/docs/milestone_2_findings.md" target="_blank" rel="noopener noreferrer">View Detailed Analysis ↗</a>
+            </div>
+            <p class="report-note">Independent portfolio analysis using public municipal data. Historical snapshot as of December 31, 2024, for requests opened in 2024. Findings are descriptive, not causal, and do not represent current case status.</p>
+          </div>
+        </article>
+
         <!-- VANGUARD DIGITAL JOURNEY A/B TEST -->
         <article class="card wide" id="vanguard-ab-test">
 
