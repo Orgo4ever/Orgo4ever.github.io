@@ -602,6 +602,29 @@
         transition: none;
       }
     }
+  
+    /* Recruiter-facing business cases */
+    .business-case {
+      margin: 16px 0 20px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      background: #edf2f8;
+    }
+    .business-case h4 {
+      color: var(--navy);
+      font-size: .9rem;
+      margin: 0 0 8px;
+    }
+    .business-case p {
+      font-size: .92rem;
+      line-height: 1.5;
+      margin: 0 0 8px;
+    }
+    .business-case p:last-child { margin-bottom: 0; }
+    .case-study .business-case { background: rgba(255,255,255,.08); border-left-color: #93c5fd; }
+    .case-study .business-case h4 { color: #fff; }
+    .case-study .business-case p { color: #d5e1ee; }
   </style>
 </head>
 
@@ -725,12 +748,17 @@
           <div class="card-body">
             <div class="tags">Python · SQLite · SQL · Power BI · DAX · Operations Analytics</div>
             <h3>ServicePulse | Operational Performance &amp; Process Improvement</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Service managers need to prioritize overdue requests without spreading limited resources across every department.</p>
+              <p><strong>Decision supported:</strong> Focus investigation on Parking Enforcement, which accounts for 44.5% of the historical overdue backlog. Check queue-level closure practices and target definitions before allocating staff or redesigning workflows.</p>
+            </section>
             <div class="experiment-stats" style="grid-template-columns:repeat(auto-fit,minmax(155px,1fr));margin:20px 0;">
               <div class="experiment-stat"><strong>306,756</strong><span>Real service requests analyzed</span></div>
               <div class="experiment-stat"><strong>44.5%</strong><span>Citywide overdue backlog attributable to Parking Enforcement</span></div>
               <div class="experiment-stat"><strong>99.7%</strong><span>Overdue Parking Enforcement requests concentrated in one queue</span></div>
             </div>
-            <p><strong>Where do operational delays concentrate, and which service workflows should management investigate first?</strong></p>
+            
             <div class="project-summary-grid">
               <div>
                 <p><strong>Technical implementation:</strong> Developed a reproducible Python and SQLite pipeline using public Boston 311 service request data. Validated source records, reconstructed historical backlog conditions, created SQL reporting views and built a two-page Power BI report.</p>
@@ -808,16 +836,16 @@
             </div>
 
             <h3>Vanguard Digital Journey A/B Test</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Product teams need to determine whether a redesigned customer journey delivers enough additional completions to justify rollout or further investment.</p>
+              <p><strong>Decision supported:</strong> The redesign improved valid completion by 2.12 percentage points, but missed the 5% relative-lift target. Investigate friction and run a follow-up test before committing to full rollout.</p>
+            </section>
 
             <div class="project-summary-grid">
 
               <div>
-                <p>
-                  <strong>
-                    Did a redesigned digital customer journey improve
-                    valid completion enough to justify further investment?
-                  </strong>
-                </p>
+                
 
                 <p>
                   In a collaborative Ironhack analytics project, we
@@ -937,16 +965,16 @@
             </div>
 
             <h3>Revenue &amp; Margin Intelligence</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Finance and commercial managers need to understand budget shortfalls and product profitability rather than relying on headline revenue alone.</p>
+              <p><strong>Decision supported:</strong> Prioritize Trade Sales variance analysis (approximately 97% of the selected budget gap), then use product-level margin reporting to guide commercial reviews. Keep the separate reporting periods and scopes distinct.</p>
+            </section>
 
             <div class="project-summary-grid">
 
               <div>
-                <p>
-                  <strong>
-                    Where is revenue missing its budget, and which products
-                    contribute most to profitability?
-                  </strong>
-                </p>
+                
 
                 <p>
                   Built two interactive Power BI dashboards using Microsoft
@@ -1048,17 +1076,16 @@
             </div>
 
             <h3>UK Pharmaceutical Procurement Analytics</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Procurement managers need reliable evidence of award activity and supplier participation, but incomplete contract values can undermine spend reporting.</p>
+              <p><strong>Decision supported:</strong> Focus reviews on award concentration and supplier participation. With 65.05% of contract values missing or nominal, reconcile source values before making expenditure or savings decisions.</p>
+            </section>
 
             <div class="project-summary-grid">
 
               <div>
-                <p>
-                  <strong>
-                    How reliably can procurement activity be understood
-                    when award counts are highly concentrated and
-                    financial reporting is incomplete?
-                  </strong>
-                </p>
+                
 
                 <p>
                   Working with a supplied database schema, I developed
@@ -1127,13 +1154,13 @@
             </div>
 
             <h3>GrantScope: Research Funding Discovery</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Research teams need to identify relevant funding precedents and assess alignment with funding programs without manually searching fragmented sources.</p>
+              <p><strong>Decision supported:</strong> Use concept-based discovery and funding trend analysis to shortlist relevant historical projects and guide funding exploration. Validate program eligibility separately; similarity is not funding probability.</p>
+            </section>
 
-            <p>
-              <strong>
-                How can researchers connect new ideas to historically
-                funded research and funding trends?
-              </strong>
-            </p>
+            
 
             <p>
               GrantScope combines an interactive Python and Streamlit
@@ -1205,7 +1232,12 @@
               Python · SQLite · SQL · Power BI · Data Quality · Governance
             </div>
             <h3>ProcureGuard: Procurement Data Quality &amp; Governance</h3>
-            <p><strong>How can a data-quality alert become an investigated, traceable issue with a verified resolution?</strong></p>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Procurement and data governance teams need to resolve data exceptions with clear ownership and evidence that corrective actions actually worked.</p>
+              <p><strong>Decision supported:</strong> Prioritize high-severity exceptions, assign owners and require a fresh validation before closure. The synthetic demonstration detected 22 initial issues and verified one resolution, illustrating an auditable control workflow.</p>
+            </section>
+            
             <p>Built a reproducible Python quality engine with six documented rules across four synthetic procurement datasets, supported by a SQLite case register, ownership, investigation, corrective actions and a fresh-data verification gate.</p>
             <p>Completed seven SQL reporting views and a three-page Power BI dashboard covering quality monitoring, issue management and verification performance. The fictional demonstration tracks 22 initial issues, one verified resolution, and a 2.63 percentage-point increase in row-level pass rate across two scans.</p>
             <div class="card-links">
@@ -1227,8 +1259,12 @@
           <div class="card-body">
             <div class="tags">Python · APIs · pytest · GitHub Actions · Data Quality</div>
             <h3>JobScout NL: Evidence-Based Job Screening</h3>
-            <p><strong>How can a changing stream of job postings become
-               a reliable, human-reviewed decision queue?</strong></p>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> High-volume screening workflows create avoidable manual review when irrelevant records rank highly or mandatory eligibility criteria are missed.</p>
+              <p><strong>Decision supported:</strong> Separate fit from hard eligibility constraints, retain supporting evidence and preserve human decisions. The workflow illustrates how to prioritize review reliably without automating final application decisions.</p>
+            </section>
+            
             <p>Designed a scheduled Python workflow to collect postings,
                screen requirements and location constraints, retain review history,
                and synchronize results with Google Sheets without overwriting
@@ -1263,6 +1299,11 @@
           </div>
 
           <h3>AI-Native Analytics &amp; Quality Leadership</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> AI evaluation operations need consistent technical judgments and reliable quality standards across reviewers while meeting client requirements.</p>
+              <p><strong>Decision supported:</strong> Use reviewer calibration, error analysis and clear evaluation criteria to improve consistency. In my professional QA Lead role, I contributed to a final 95% project pass rate against a target above 90%.</p>
+            </section>
 
           <p>
             My experience with AI goes beyond using it as a
@@ -1330,7 +1371,12 @@
           <div class="card-body">
             <div class="tags">Python · scikit-learn · Feature Engineering · Regression</div>
             <h3>Predicting Concrete Compressive Strength</h3>
-            <p><strong>Can material composition and curing age provide useful preliminary strength estimates?</strong></p>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Materials teams need early estimates of compressive strength to prioritize candidate mix designs before committing to physical testing.</p>
+              <p><strong>Decision supported:</strong> Use the regression model (held-out MAE of 2.66 MPa) for preliminary screening and experiment prioritization, while retaining physical testing for engineering acceptance and safety decisions.</p>
+            </section>
+            
             <p>Developed a supervised regression workflow using 1,005 observations,
                domain-informed features, ensemble methods and cross-validation.
                The final Gradient Boosting model achieved a held-out test MAE
@@ -1362,14 +1408,13 @@
             </div>
 
             <h3>European AI Growth &amp; Environmental Sustainability</h3>
+            <section class="business-case" aria-label="Business case">
+              <h4>Business case</h4>
+              <p><strong>Problem:</strong> Technology and sustainability decision-makers need to assess whether expanding AI adoption aligns with renewable energy and emissions conditions.</p>
+              <p><strong>Decision supported:</strong> Compare energy and emissions indicators alongside AI adoption when reviewing infrastructure or policy priorities. The exploratory findings support further investigation rather than causal claims or investment decisions based on adoption alone.</p>
+            </section>
 
-            <p>
-              <strong>
-                Is Europe's accelerating AI adoption developing
-                alongside energy conditions that could support
-                sustainable growth?
-              </strong>
-            </p>
+            
 
             <p>
               In this collaborative Ironhack project, I developed
